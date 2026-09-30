@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Soko Corner | Goods and services, paid with M-Pesa</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="styles.css"></head><body>
+<header><a class="logo" href="./">Soko Corner</a><button id="cartBtn">Cart (<span id="count">0</span>)</button></header>
+<section class="hero"><h1>Buy goods. Book services. Pay with M-Pesa.</h1>
+<p>Add items to your cart, enter your phone number, and approve the prompt with your PIN.</p></section>
+<nav class="tabs" id="tabs"><button data-f="all" class="on">All</button><button data-f="good">Goods</button><button data-f="service">Services</button></nav>
+<main id="grid"></main>
+<aside id="cart" hidden><h2>Your cart</h2><div id="items"></div><p class="total">Total: <strong id="total">KES 0</strong></p>
+<button id="checkout" class="pri">Pay with M-Pesa</button><button id="close" class="ghost">Keep shopping</button></aside>
+<dialog id="pay"><form id="form"><h2>Pay with M-Pesa</h2>
+<label>Your name<input id="name" required autocomplete="name"></label>
+<label>M-Pesa phone number<input id="phone" required inputmode="tel" placeholder="0712345678" autocomplete="tel"></label>
+<p id="msg" role="status"></p>
+<button id="go" class="pri">Send payment request</button><button type="button" id="cancel" class="ghost">Cancel</button></form></dialog>
+<footer>Soko Corner is a student project. Payments run on the Safaricom Daraja sandbox.</footer>
+<script src="products.js"></script><script src="app.js"></script></body></html>
